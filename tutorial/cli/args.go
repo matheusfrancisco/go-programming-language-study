@@ -1,0 +1,22 @@
+/*
+Echo1 print its command-line arguments
+
+os.Args[0] is the name of the command itself;
+*/
+package main
+
+import (
+    "fmt"
+    "os"
+)
+
+func main() {
+    var s, sep string
+    for i := 1; i < len(os.Args); i++ {
+        s += sep + os.Args[i]
+        sep = " "
+    }
+
+    fmt.Println(s)
+
+}
